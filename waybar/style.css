@@ -1,0 +1,77 @@
+@define-color sumiInk1 #1F1F28;
+@define-color sumiInk2 #2A2A37;
+@define-color fujiWhite #DCD7BA;
+@define-color crystalBlue #7E9CD8;
+@define-color springBlue #7FB4CA;
+@define-color sakuraPink #D27E99;
+@define-color waveBlue1 #2D4F67;
+@define-color waveAqua1 #6A9589;
+@define-color samuraiRed #C34043;
+@define-color surimiOrange #FFA066;
+@define-color fujiGray #727169;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
+    font-size: 19px; 
+    font-weight: 700;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar,
+window#waybar.empty {
+    background: transparent;
+    background-color: transparent;
+}
+
+#custom-gentoo,
+#workspaces,
+#custom-weather,
+#memory,
+#disk,
+#cpu,
+#battery,
+#pulseaudio,
+#clock {
+    background-color: @sumiInk2;
+    border-radius: 20px;
+    padding: 12px 24px; 
+    margin: 0px;
+    border: 2px solid rgba(126, 156, 216, 0.25);
+}
+
+#custom-gentoo {
+    color: @sakuraPink;
+    font-size: 26px;
+    padding: 0px 26px;
+}
+
+#workspaces {
+    padding: 8px 16px;
+}
+
+#workspaces button {
+    color: @fujiGray;
+    padding: 0 8px;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+    color: @springBlue;
+    text-shadow: 0px 0px 8px @springBlue;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    color: @crystalBlue;
+}
+
+#custom-weather { color: @springBlue; }
+#memory { color: @waveAqua1; }
+#disk { color: @sakuraPink; }
+#cpu { color: @samuraiRed; }
+#battery { color: @waveAqua1; }
+#battery.charging { color: @springBlue; }
+#pulseaudio { color: @crystalBlue; }
+#clock { color: @surimiOrange; font-size: 19px; }
